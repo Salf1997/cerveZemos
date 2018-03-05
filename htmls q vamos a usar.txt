@@ -6,3 +6,4 @@ acordion.html - ficha de cervezas/bebida
 about2.html - sobre nosotros
 
 
+hola miguel
