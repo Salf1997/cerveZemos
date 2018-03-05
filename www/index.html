@@ -31,19 +31,6 @@
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="assets/images/cerveZemos-ico.ico">
 
-		<!-- MODAL DE PRUEBA -->
-
-		  <meta charset="utf-8">
-		  <meta name="viewport" content="width=device-width, initial-scale=1">
-		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-				
-		<!-- HTML5 elements and media queries Support for IE8 : HTML5 shim and Respond.js -->
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
 	</head>
 	
 	<body>
@@ -97,8 +84,11 @@
 
 								<!-- ============================================================= MI CUENTA ============================================================= -->
 								
-								<li>
-									<a href="#" data-toggle="modal" data-target="#myModal" id="id01">Mi cuenta</a>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle js-activated">Mi cuenta</a>
+									<ul class="dropdown-menu">
+										<li><a href="inicioSesion.html">Iniciar Sesi&oacuten</a></li>
+									</ul>
 								</li>
 								
 								<!-- ============================================================= AYUDA ============================================================= -->
@@ -109,7 +99,7 @@
 									<ul class="dropdown-menu">
 										<li><a href="about-cervezemos.html">Informaci&oacuten</a></li>
 										<li><a href="contact-cervezemos.html">Preguntas frecuentes</a></li>
-										<li><a href="">Aviso legal></a></li>
+										<li><a href="">Aviso legal</a></li>
 									</ul><!-- /.dropdown-menu -->
 								</li><!-- /.dropdown -->
 
@@ -153,6 +143,50 @@
 		
 		<main>
 			
+			<button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+			<!-- The Modal -->
+			<div id="id01" class="modal">
+
+			  	<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+			  	<!-- Modal Content -->
+			  	<form class="modal-content animate" action="/action_page.php">
+				    <div class="imgcontainer">
+				      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+				    </div>
+
+				    <div class="container">
+				      <label for="uname"><b>Username</b></label>
+				      <input type="text" placeholder="Enter Username" name="uname" required>
+
+				      <label for="psw"><b>Password</b></label>
+				      <input type="password" placeholder="Enter Password" name="psw" required>
+
+				      <button type="submit">Login</button>
+				      <label>
+				        <input type="checkbox" checked="checked" name="remember"> Remember me
+				      </label>
+				    </div>
+
+				    <div class="container" style="background-color:#f1f1f1">
+				      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+				      <span class="psw">Forgot <a href="#">password?</a></span>
+				    </div>
+			  	</form>
+			</div>
+
+				<script>
+					// Get the modal
+					var modal = document.getElementById('id01');
+
+					// When the user clicks anywhere outside of the modal, close it
+					window.onclick = function(event) {
+					    if (event.target == modal) {
+					        modal.style.display = "none";
+					    }
+				}
+				</script>
 			<!-- ============================================================= SECTION – HERO ============================================================= -->
 			
 			<section id="hero">
@@ -455,43 +489,9 @@
 					
 					<div class="col-md-3 col-sm-6 inner">
 						<h4>Who we are</h4>
-						<a href="index.html"><img class="logo img-intext" src="assets/images/logo-white.svg" alt=""></a>
 						<p>Magnis modipsae voloratati andigen daepeditem quiate re porem que aut labor. Laceaque eictemperum quiae sitiorem rest non restibusaes maio es dem tumquam.</p>
 						<a href="about.html" class="txt-btn">More about us</a>
-					</div><!-- /.col -->
-					
-					<div class="col-md-3 col-sm-6 inner">
-						<h4>Latest works</h4>
-						
-						<div class="row thumbs gap-xs">
-														
-							<div class="col-xs-6 thumb">
-								<figure class="icon-overlay icn-link">
-									<a href="portfolio-post.html"><img src="assets/images/art/work02.jpg" alt=""></a>
-								</figure>
-							</div><!-- /.thumb -->
-							
-							<div class="col-xs-6 thumb">
-								<figure class="icon-overlay icn-link">
-									<a href="portfolio-post.html"><img src="assets/images/art/work03.jpg" alt=""></a>
-								</figure>
-							</div><!-- /.thumb -->
-							
-							<div class="col-xs-6 thumb">
-								<figure class="icon-overlay icn-link">
-									<a href="portfolio-post.html"><img src="assets/images/art/work07.jpg" alt=""></a>
-								</figure>
-							</div><!-- /.thumb -->
-							
-							<div class="col-xs-6 thumb">
-								<figure class="icon-overlay icn-link">
-									<a href="portfolio-post.html"><img src="assets/images/art/work01.jpg" alt=""></a>
-								</figure>
-							</div><!-- /.thumb -->
-							
-						</div><!-- /.row -->
-					</div><!-- /.col -->
-					
+					</div><!-- /.col -->			
 					
 					<div class="col-md-3 col-sm-6 inner">
 						<h4>Get In Touch</h4>
@@ -501,16 +501,6 @@
 							<li><i class="icon-mobile contact"></i> +00 (123) 456 78 90</li>
 							<li><a href="#"><i class="icon-mail-1 contact"></i> info@reen.com</a></li>
 						</ul><!-- /.contacts -->
-					</div><!-- /.col -->
-					
-					<div class="col-md-3 col-sm-6 inner">
-						<h4>Free updates</h4>
-						<p>Conecus iure posae volor remped modis aut lor volor accabora incim resto explabo.</p>
-						<form id="newsletter" class="form-inline newsletter" role="form">
-							<label class="sr-only" for="exampleInputEmail">Email address</label>
-							<input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter your email address">
-							<button type="submit" class="btn btn-default btn-submit">Subscribe</button>
-						</form>
 					</div><!-- /.col -->
 					
 				</div><!-- /.row --> 
