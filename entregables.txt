@@ -1,0 +1,12 @@
+MEMORIA
+
+Portada (nombre proyecto+participantes)
+Introduccion
+Planteamiento del problema (contar un poco fases del design thinking) + objetivos principales
+Requisitos (F y NF) + Explicacion sobre solucion propuesta
+Casos de uso
+Metodología de diseño
+Desarrollo (codigo)
+Evaluación heurística
+Conclusiones
+Bibliografía
