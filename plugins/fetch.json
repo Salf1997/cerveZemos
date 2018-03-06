@@ -1,0 +1,17 @@
+{
+    "cordova-plugin-googlemaps": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-googlemaps@^2.2.5"
+        },
+        "is_top_level": true,
+        "variables": {
+            "API_KEY_FOR_ANDROID": "(api key)",
+            "API_KEY_FOR_IOS": "(api key)",
+            "PLAY_SERVICES_VERSION": "11.8.0",
+            "ANDROID_SUPPORT_V4_VERSION": "24.1.0",
+            "LOCATION_WHEN_IN_USE_DESCRIPTION": "(your custom message)",
+            "LOCATION_ALWAYS_USAGE_DESCRIPTION": "(your custom message)"
+        }
+    }
+}

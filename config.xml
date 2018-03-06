@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>CerveZemos2</name>
+    <name>CerveZemos</name>
     <description>
         CerveZemos: una aplicacion para buscar bares y bebidas.
     </description>
@@ -22,32 +22,24 @@
 	  <preference name="show-splash-screen-spinner" value="true"/>
 	  <preference name="auto-hide-splash-screen" value="true"/>
 	  <preference name="disable-cursor" value="false"/>
-	  <preference name="android-minSdkVersion" value="7"/>
+	  <preference name="android-minSdkVersion" value="16"/>
 	  <preference name="android-installLocation" value="auto"/>
-	  <gap:plugin name="org.apache.cordova.battery-status"/>
-	  <gap:plugin name="org.apache.cordova.camera"/>
-	  <gap:plugin name="org.apache.cordova.media-capture"/>
-	  <gap:plugin name="org.apache.cordova.console"/>
-	  <gap:plugin name="org.apache.cordova.contacts"/>
-	  <gap:plugin name="org.apache.cordova.device"/>
-	  <gap:plugin name="org.apache.cordova.device-motion"/>
-	  <gap:plugin name="org.apache.cordova.device-orientation"/>
-	  <gap:plugin name="org.apache.cordova.dialogs"/>
-	  <gap:plugin name="org.apache.cordova.file"/>
-	  <gap:plugin name="org.apache.cordova.file-transfer"/>
-	  <gap:plugin name="org.apache.cordova.geolocation"/>
-	  <gap:plugin name="org.apache.cordova.globalization"/>
-	  <gap:plugin name="org.apache.cordova.inappbrowser"/>
-	  <gap:plugin name="org.apache.cordova.media"/>
-	  <gap:plugin name="org.apache.cordova.network-information"/>
-	  <gap:plugin name="org.apache.cordova.splashscreen"/>
-	  <gap:plugin name="org.apache.cordova.vibration"/>
-	  <icon src="icon.png"/>
-	  <icon src="www/assets/images/cerveZemos-ico.ico" gap:platform="android" gap:qualifier="ldpi"/>
-	  <icon src="www/assets/images/cerveZemos-ico.ico" gap:platform="android" gap:qualifier="mdpi"/>
-	  <icon src="www/assets/images/cerveZemos-ico.ico" gap:platform="android" gap:qualifier="hdpi"/>
-	  <icon src="www/assets/images/cerveZemos-ico.ico" gap:platform="android" gap:qualifier="xhdpi"/>
-	  <icon src="www/assets/images/cerveZemos-ico.ico" gap:platform="winphone"/>
-	  <icon src="www/assets/images/cerveZemos-ico.ico" gap:platform="winphone" gap:role="background"/>
+	<plugin name="cordova-plugin-googlemaps" spec="^2.2.5">
+	    <variable name="API_KEY_FOR_ANDROID" value="(api key)" />
+	    <variable name="API_KEY_FOR_IOS" value="(api key)" />
+	    <variable name="PLAY_SERVICES_VERSION" value="11.8.0" />
+	    <variable name="ANDROID_SUPPORT_V4_VERSION" value="24.1.0" />
+	    <variable name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="(your custom message)" />
+	    <variable name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="(your custom message)" />
+  	</plugin>
+
+
+	  <icon src="www/assets/images/ztransparente.png"/>
+	  <icon src="www/assets/images/ztransparente.png" gap:platform="android" gap:qualifier="ldpi"/>
+	  <icon src="www/assets/images/ztransparente.png" gap:platform="android" gap:qualifier="mdpi"/>
+	  <icon src="www/assets/images/ztransparente.png" gap:platform="android" gap:qualifier="hdpi"/>
+	  <icon src="www/assets/images/ztransparente.png" gap:platform="android" gap:qualifier="xhdpi"/>
+	  <icon src="www/assets/images/ztransparente.png" gap:platform="winphone"/>
+	  <icon src="www/assets/images/ztransparente.png" gap:platform="winphone" gap:role="background"/>
     <access origin="*" />
 </widget>
