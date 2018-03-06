@@ -26,7 +26,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<style>
-	    body {font-family: Arial, Helvetica, sans-serif;}
 	    form {border: 3px solid #f1f1f1;}
 
 	    input[type=text], input[type=password] {
@@ -52,12 +51,6 @@
 	        opacity: 0.8;
 	    }
 
-	    .cancelbtn {
-	        width: auto;
-	        padding: 10px 18px;
-	        background-color: #f44336;
-	    }
-
 	    .imgcontainer {
 	        text-align: center;
 	        margin: 24px 0 12px 0;
@@ -81,10 +74,7 @@
 	        span.psw {
 	           display: block;
 	           float: none;
-	        }
-	        .cancelbtn {
-	           width: 100%;
-	        }
+
 	    }
 	</style>
 </head>
@@ -125,78 +115,79 @@
 
   <!-- ============================================================= MAIN ===================================================================== -->
   <main>
-    <h2>Inicio de Sesi&oacuten</h2>
+  	<div class="col-md-4 col-sm-6 inner-top inner-right-sm">
+	    <h1>Inicio de Sesi&oacuten</h1>
 
-    <form accept-charset="utf-8">
-      <div class="imgcontainer">
-        <img src="assets/images/ztransparente.png" alt="Avatar" class="avatar">
-      </div>
+	    <form accept-charset="utf-8">
+	      <div class="imgcontainer">
+	        <img src="assets/images/ztransparente.png" alt="Avatar" class="avatar">
+	      </div>
 
-      <div class="container">
-        <label for="uname"><b>Usuario</b></label>
-        <input type="text" id="user" name="uname" required>
+	      <div class="container">
+	        <label for="uname"><b>Usuario</b></label>
+	        <input type="text" id="user" name="uname" required>
 
-        <label for="psw"><b>Contrase&ntildea</b></label>
-        <input type="password" id="pass" name="psw" required>
-            
-        <button type="submit" id="login" onclick="myFunction()">Iniciar Sesi&oacuten</button>
-      </div>
+	        <label for="psw"><b>Contrase&ntildea</b></label>
+	        <input type="password" id="pass" name="psw" required>
+	        <button class="btn btn-cerveza" id="login" onclick="myFunction(); return true">Iniciar Sesi&oacuten</button>
+	      </div>
 
-      <div class="container" style="background-color:#f1f1f1">
-        <span class="psw">Forgot <a href="#">password?</a></span>
-      </div>
+	      <div class="container" style="background-color:#f1f1f1">
+	        <span class="psw"><a href="inicio-cervezemos.html">Forgot password?</a></span>
+	      </div>
 
-      <p id="demo"></p>
+	      <p id="demo"></p>
 
-      <div class="container" id="updateXML"></div>
+	      <div class="container" id="updateXML"></div>
 
-      <script>
-      function myFunction() {
-          var user = document.getElementById("user").value;
-          var pass = document.getElementById("pass").value;
-          if(user == "usuario1" && pass == "usuario1") {
-              locate="index.html";
-              document.getElementById("demo").innerHTML = "BIEN :)";
-              window.open("inicio-cervezemos.html");
-              window.close();
-              return true;
-          } else {
-              document.getElementById("demo").innerHTML = "MAL :(";
-              return false;
-          }
-      }
-      function logIn(){
-          var request;
-          if (window.XMLHttpRequest) {
-           request = new XMLHttpRequest();
-          } else {
-           request = new ActiveXObject("Microsoft.XMLHTTP");
-          }
-          request.open('GET', 'usuarios.xml');
-          request.onreadystatechange = function() {
-           if ((request.readyState===4) && (request.status===200)) {  
-                  alert("Entrando en funcion");  
-                  var i;
-                  var xmlDoc = request.responseXML;
-                  var output2 = '<ul>';
-                  var x = xmlDoc.getElementsByTagName('usuario');
-                  for (i = 0; i <x.length; i++) { 
-                      output2 += "<li>" +
-                      x[i].getElementsByTagName("user")[0].childNodes[0].nodeValue +
-                      "  "+
-                      x[i].getElementsByTagName("password")[0].childNodes[0].nodeValue +
-                      "</li>" ;
-                  }
-                  output2 += '</ul>';
-                  document.getElementById("updateXML").innerHTML = output2;
-             }
-               
-          }
-          request.send();
-      }
-      </script>
+	      <script>
+	      function myFunction() {
+	          var user = document.getElementById("user").value;
+	          var pass = document.getElementById("pass").value;
+	          if(user == "usuario1" && pass == "usuario1") {
+	              locate="index.html";
+	              document.getElementById("demo").innerHTML = "BIEN :)";
+	              window.open('inicio-cervezemos.html','_self');
+	              //window.close();
+	              return true;
+	          } else {
+	              document.getElementById("demo").innerHTML = "MAL :(";
+	              return false;
+	          }
+	      }
+	      function logIn(){
+	          var request;
+	          if (window.XMLHttpRequest) {
+	           request = new XMLHttpRequest();
+	          } else {
+	           request = new ActiveXObject("Microsoft.XMLHTTP");
+	          }
+	          request.open('GET', 'usuarios.xml');
+	          request.onreadystatechange = function() {
+	           if ((request.readyState===4) && (request.status===200)) {  
+	                  alert("Entrando en funcion");  
+	                  var i;
+	                  var xmlDoc = request.responseXML;
+	                  var output2 = '<ul>';
+	                  var x = xmlDoc.getElementsByTagName('usuario');
+	                  for (i = 0; i <x.length; i++) { 
+	                      output2 += "<li>" +
+	                      x[i].getElementsByTagName("user")[0].childNodes[0].nodeValue +
+	                      "  "+
+	                      x[i].getElementsByTagName("password")[0].childNodes[0].nodeValue +
+	                      "</li>" ;
+	                  }
+	                  output2 += '</ul>';
+	                  document.getElementById("updateXML").innerHTML = output2;
+	             }
+	               
+	          }
+	          request.send();
+	      }
+	      </script>
 
-    </form>
+	    </form>
+	</div>
   </main>
 
   <!-- ============================================================= MAIN : END ============================================================= -->
@@ -216,7 +207,6 @@
 					<ul class="contacts">
 						<li><i class="icon-location contact"></i> Calle Tajo, s/n, 28670 - Madrid, Espa&ntildea</li>
 						<li><i class="icon-mobile contact"></i> +34 917 40 72 72</li>
-						<li><a href="contact-cervezemos.html"><i class="icon-mail-1 contact"></i> Cont&aacutectanos</a></li>
 					</ul><!-- /.contacts -->
 				</div><!-- /.col -->
 			</div><!-- /.row --> 
