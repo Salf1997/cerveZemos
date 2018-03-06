@@ -25,12 +25,12 @@
 	  <preference name="android-minSdkVersion" value="7"/>
 	  <preference name="android-installLocation" value="auto"/>
 
-	  <icon src="icon.png"/>
-	  <icon src="www/assets/images/cerveZemos-ico.ico" gap:platform="android" gap:qualifier="ldpi"/>
-	  <icon src="www/assets/images/cerveZemos-ico.ico" gap:platform="android" gap:qualifier="mdpi"/>
-	  <icon src="www/assets/images/cerveZemos-ico.ico" gap:platform="android" gap:qualifier="hdpi"/>
-	  <icon src="www/assets/images/cerveZemos-ico.ico" gap:platform="android" gap:qualifier="xhdpi"/>
-	  <icon src="www/assets/images/cerveZemos-ico.ico" gap:platform="winphone"/>
-	  <icon src="www/assets/images/cerveZemos-ico.ico" gap:platform="winphone" gap:role="background"/>
+	  <icon src="www/assets/images/ztransparente.png"/>
+	  <icon src="www/assets/images/ztransparente.png" gap:platform="android" gap:qualifier="ldpi"/>
+	  <icon src="www/assets/images/ztransparente.png" gap:platform="android" gap:qualifier="mdpi"/>
+	  <icon src="www/assets/images/ztransparente.png" gap:platform="android" gap:qualifier="hdpi"/>
+	  <icon src="www/assets/images/ztransparente.png" gap:platform="android" gap:qualifier="xhdpi"/>
+	  <icon src="www/assets/images/ztransparente.png" gap:platform="winphone"/>
+	  <icon src="www/assets/images/ztransparente.png" gap:platform="winphone" gap:role="background"/>
     <access origin="*" />
 </widget>
