@@ -129,7 +129,7 @@
 
 	        <label for="psw"><b>Contrase&ntildea</b></label>
 	        <input type="password" id="pass" name="psw" required>
-	        <button class="btn btn-cerveza" id="login" onclick="myFunction(); return true">Iniciar Sesi&oacuten</button>
+	        <button class="btn btn-cerveza" id="login" onclick="myFunction()"><a href="inicio-cervezemos.html"></a>Iniciar Sesi&oacuten</button>
 	      </div>
 
 	      <div class="container" style="background-color:#f1f1f1">
@@ -148,8 +148,9 @@
 	              locate="index.html";
 	              document.getElementById("demo").innerHTML = "BIEN :)";
 	              window.open('inicio-cervezemos.html','_self');
+	              output = '<a href="inicio-cervezemos.html"></a>';
 	              //window.close();
-	              return true;
+	              return output;
 	          } else {
 	              document.getElementById("demo").innerHTML = "MAL :(";
 	              return false;
