@@ -24,7 +24,6 @@
 	  <preference name="disable-cursor" value="false"/>
 	  <preference name="android-minSdkVersion" value="16"/>
 	  <preference name="android-installLocation" value="auto"/>
-	  <gap:plugin name="org.apache.cordova.geolocation"/>
 	<plugin name="cordova-plugin-googlemaps" spec="^2.2.5">
 	    <variable name="API_KEY_FOR_ANDROID" value="(api key)" />
 	    <variable name="API_KEY_FOR_IOS" value="(api key)" />
