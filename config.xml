@@ -25,6 +25,14 @@
 	  <preference name="android-minSdkVersion" value="16"/>
 	  <preference name="android-installLocation" value="auto"/>
 	  <gap:plugin name="org.apache.cordova.geolocation"/>
+	<plugin name="cordova-plugin-googlemaps" spec="^2.2.5">
+	    <variable name="API_KEY_FOR_ANDROID" value="(api key)" />
+	    <variable name="API_KEY_FOR_IOS" value="(api key)" />
+	    <variable name="PLAY_SERVICES_VERSION" value="11.8.0" />
+	    <variable name="ANDROID_SUPPORT_V4_VERSION" value="24.1.0" />
+	    <variable name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="(your custom message)" />
+	    <variable name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="(your custom message)" />
+  	</plugin>
 
 
 	  <icon src="www/assets/images/ztransparente.png"/>
