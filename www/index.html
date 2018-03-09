@@ -30,7 +30,7 @@
     <link rel="shortcut icon" href="assets/images/cerveZemos-ico.ico">
     <script src="/assets/js/jquery.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<style>
@@ -94,12 +94,6 @@
         <div class="navbar-header">
           <div class="container">
             
-            <ul class="social pull-right">
-              <li><a href="#"><i class="icon-s-facebook"></i></a></li>
-              <li><a href="#"><i class="icon-s-gplus"></i></a></li>
-              <li><a href="#"><i class="icon-s-twitter"></i></a></li>
-            </ul><!-- /.social -->
-            
             <!-- ============================================================= LOGO MOBILE ============================================================= -->
             
             <a class="navbar-brand" href="index.html"><img src="assets/images/logo1.png" class="logo" alt=""></a>
@@ -108,8 +102,7 @@
           </div><!-- /.container -->
         </div><!-- /.navbar-header -->
         
-        <div class="yamm">
-          <div class="navbar-collapse collapse">
+        <div class="navbar-collapse collapse">
             <div class="container">
               
               <!-- ============================================================= LOGO ============================================================= -->
@@ -117,6 +110,8 @@
               <a class="navbar-brand" href="index.html"><img src="assets/images/logo1.png" class="logo" alt=""></a>
               
               <!-- ============================================================= LOGO : END ============================================================= -->
+            </div>
+        </div>
     </header>
     
   <!-- ============================================================= HEADER : END ============================================================= -->
@@ -126,18 +121,18 @@
   	<div class="col-md-4 col-sm-6 inner-top inner-right-sm">
 	    <h1>Inicio de Sesi&oacuten</h1>
 
-	    <form accept-charset="utf-8">
+	    <form accept-charset="utf-8" id="login-form">
 	      <div class="imgcontainer">
 	        <img src="assets/images/ztransparente.png" alt="Avatar" class="avatar">
 	      </div>
 
 	      <div class="container">
 	        <label for="uname"><b>Usuario</b></label>
-	        <input type="text" id="user" name="uname" required>
+	        <input type="text" id="user" name="username" required>
 
 	        <label for="psw"><b>Contrase&ntildea</b></label>
-	        <input type="password" id="pass" name="psw" required>
-	        <button class="btn btn-cerveza" id="login" onclick="logIn()"><a href="inicio-cervezemos.html"></a>Iniciar Sesi&oacuten</button>
+	        <input type="password" id="pass" name="password" required>
+	        <button class="btn btn-cerveza" id="boton" onclick="logIn()">Iniciar Sesi&oacuten</button>
 	      </div>
 
 	      <div class="container" style="background-color:#f1f1f1">
@@ -149,18 +144,15 @@
 	      <div class="container" id="updateXML"></div>
 
 	      <script>
+		  document.getElementById("boton").addEventListener("load", logIn);
 	      function logIn() {
 	          var user = document.getElementById("user").value;
 	          var pass = document.getElementById("pass").value;
 	          if(user == "usuario1" && pass == "usuario1") {
-	              locate="index.html";
-	              document.getElementById("demo").innerHTML = "BIEN :)";
-	              window.open('inicio-cervezemos.html','_self');
-	              output = '<a href="inicio-cervezemos.html"></a>';
-	              //window.close();
-	              return output;
+	              	locate="index.html";
+	              	window.location.assign("inicio-cervezemos.html");
 	          } else {
-	              document.getElementById("demo").innerHTML = "MAL :(";
+	              alert("Los datos introducidos no son correctos.");
 	              return false;
 	          }
 	      }
@@ -209,6 +201,7 @@
     <script src="assets/js/google.maps.api.v3.js"></script>
     <script src="assets/js/viewport-units-buggyfill.js"></script>
     <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/usuarios.js"></script>
 </body>
 </html>
 
