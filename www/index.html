@@ -149,8 +149,8 @@
 	          var user = document.getElementById("user").value;
 	          var pass = document.getElementById("pass").value;
 	          if(user == "usuario1" && pass == "usuario1") {
-	              	locate="index.html";
 	              	window.location.assign("inicio-cervezemos.html");
+	              	return false;
 	          } else {
 	              alert("Los datos introducidos no son correctos.");
 	              return false;
