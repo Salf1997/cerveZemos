@@ -17,8 +17,6 @@
     <!-- Customizable CSS -->
     <link href="assets/css/main.css" rel="stylesheet" data-skrollr-stylesheet>
     <link href="assets/css/cerveza.css" rel="stylesheet" title="Color">
-    <link href="assets/css/owl.carousel.css" rel="stylesheet">
-    <link href="assets/css/owl.transitions.css" rel="stylesheet">
     <link href="assets/css/animate.min.css" rel="stylesheet">
     
     <!-- Fonts -->
@@ -32,7 +30,7 @@
     <link rel="shortcut icon" href="assets/images/cerveZemos-ico.ico">
     <script src="/assets/js/jquery.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<style>
@@ -96,12 +94,6 @@
         <div class="navbar-header">
           <div class="container">
             
-            <ul class="social pull-right">
-              <li><a href="#"><i class="icon-s-facebook"></i></a></li>
-              <li><a href="#"><i class="icon-s-gplus"></i></a></li>
-              <li><a href="#"><i class="icon-s-twitter"></i></a></li>
-            </ul><!-- /.social -->
-            
             <!-- ============================================================= LOGO MOBILE ============================================================= -->
             
             <a class="navbar-brand" href="index.html"><img src="assets/images/logo1.png" class="logo" alt=""></a>
@@ -110,8 +102,7 @@
           </div><!-- /.container -->
         </div><!-- /.navbar-header -->
         
-        <div class="yamm">
-          <div class="navbar-collapse collapse">
+        <div class="navbar-collapse collapse">
             <div class="container">
               
               <!-- ============================================================= LOGO ============================================================= -->
@@ -119,6 +110,8 @@
               <a class="navbar-brand" href="index.html"><img src="assets/images/logo1.png" class="logo" alt=""></a>
               
               <!-- ============================================================= LOGO : END ============================================================= -->
+            </div>
+        </div>
     </header>
     
   <!-- ============================================================= HEADER : END ============================================================= -->
@@ -128,18 +121,18 @@
   	<div class="col-md-4 col-sm-6 inner-top inner-right-sm">
 	    <h1>Inicio de Sesi&oacuten</h1>
 
-	    <form accept-charset="utf-8">
+	    <form accept-charset="utf-8" id="login-form">
 	      <div class="imgcontainer">
 	        <img src="assets/images/ztransparente.png" alt="Avatar" class="avatar">
 	      </div>
 
 	      <div class="container">
 	        <label for="uname"><b>Usuario</b></label>
-	        <input type="text" id="user" name="uname" required>
+	        <input type="text" id="user" name="username" required>
 
 	        <label for="psw"><b>Contrase&ntildea</b></label>
-	        <input type="password" id="pass" name="psw" required>
-	        <button class="btn btn-cerveza" id="login" onclick="myFunction()"><a href="inicio-cervezemos.html"></a>Iniciar Sesi&oacuten</button>
+	        <input type="password" id="pass" name="password" required>
+	        <button class="btn btn-cerveza" id="boton" onclick="logIn()">Iniciar Sesi&oacuten</button>
 	      </div>
 
 	      <div class="container" style="background-color:#f1f1f1">
@@ -151,49 +144,17 @@
 	      <div class="container" id="updateXML"></div>
 
 	      <script>
-	      function myFunction() {
+		  document.getElementById("boton").addEventListener("load", logIn);
+	      function logIn() {
 	          var user = document.getElementById("user").value;
 	          var pass = document.getElementById("pass").value;
 	          if(user == "usuario1" && pass == "usuario1") {
-	              locate="index.html";
-	              document.getElementById("demo").innerHTML = "BIEN :)";
-	              window.open('inicio-cervezemos.html','_self');
-	              output = '<a href="inicio-cervezemos.html"></a>';
-	              //window.close();
-	              return output;
+	              	locate="index.html";
+	              	window.location.assign("inicio-cervezemos.html");
 	          } else {
-	              document.getElementById("demo").innerHTML = "MAL :(";
+	              alert("Los datos introducidos no son correctos.");
 	              return false;
 	          }
-	      }
-	      function logIn(){
-	          var request;
-	          if (window.XMLHttpRequest) {
-	           request = new XMLHttpRequest();
-	          } else {
-	           request = new ActiveXObject("Microsoft.XMLHTTP");
-	          }
-	          request.open('GET', 'usuarios.xml');
-	          request.onreadystatechange = function() {
-	           if ((request.readyState===4) && (request.status===200)) {  
-	                  alert("Entrando en funcion");  
-	                  var i;
-	                  var xmlDoc = request.responseXML;
-	                  var output2 = '<ul>';
-	                  var x = xmlDoc.getElementsByTagName('usuario');
-	                  for (i = 0; i <x.length; i++) { 
-	                      output2 += "<li>" +
-	                      x[i].getElementsByTagName("user")[0].childNodes[0].nodeValue +
-	                      "  "+
-	                      x[i].getElementsByTagName("password")[0].childNodes[0].nodeValue +
-	                      "</li>" ;
-	                  }
-	                  output2 += '</ul>';
-	                  document.getElementById("updateXML").innerHTML = output2;
-	             }
-	               
-	          }
-	          request.send();
 	      }
 	      </script>
 
@@ -207,17 +168,14 @@
     
 	<footer class="dark-bg">
 		<div class="container inner">
-			<div class="row">
-				<div class="col-md-3 col-sm-6 inner">
-					<h4>&iquestQui&eacutenes somos?</h4>
-					<p>CerveZemos es una aplicaci&oacuten destinada a informar a la gente sobre los bares de su zona y qu&eacute bebidas puede encontrarse en cada uno.</p>
-				</div><!-- /.col -->					
-				
+			<div class="row">		
 				<div class="col-md-3 col-sm-6 inner">
 					<h4>Informaci&oacuten de contacto</h4>
 					<ul class="contacts">
 						<li><i class="icon-location contact"></i> Calle Tajo, s/n, 28670 - Madrid, Espa&ntildea</li>
 						<li><i class="icon-mobile contact"></i> +34 917 40 72 72</li>
+						<li><a href="contactoNoLogged-cervezemos.html"><i class="icon-mail-1 contact"></i> Cont&aacutectanos</a></li>
+
 					</ul><!-- /.contacts -->
 				</div><!-- /.col -->
 			</div><!-- /.row --> 
@@ -243,11 +201,7 @@
     <script src="assets/js/google.maps.api.v3.js"></script>
     <script src="assets/js/viewport-units-buggyfill.js"></script>
     <script src="assets/js/scripts.js"></script>
-
-    
-    <link href="assets/css/cerveza.css" rel="alternate stylesheet" title="Blue color">
-
-    <script src="switchstylesheet/switchstylesheet.js"></script>
+    <script src="assets/js/usuarios.js"></script>
 </body>
 </html>
 
