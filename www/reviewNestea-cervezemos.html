@@ -9,7 +9,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 		
-		<title>cerveZemos</title>
+		<title>Cervezemos</title>
 		
 		<!-- Bootstrap Core CSS -->
 		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -29,16 +29,32 @@
 		<link href="assets/fonts/fontello.css" rel="stylesheet">
 		
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="assets/images/cerveZemos-ico.ico">
+		<link rel="shortcut icon" href="assets/images/cervezemos-ico.ico">
+		
+		<!-- HTML5 elements and media queries Support for IE8 : HTML5 shim and Respond.js -->
+		<!--[if lt IE 9]>
+			<script src="assets/js/html5shiv.js"></script>
+			<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
 	</head>
 	
 	<body>
+		
+		<!-- ============================================================= HEADER ============================================================= -->
 		
 		<header>
 			<div class="navbar">
 				
 				<div class="navbar-header">
 					<div class="container">
+						
+						
+						<ul class="social pull-right">
+							<li><a href="#"><i class="icon-s-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-s-gplus"></i></a></li>
+							<li><a href="#"><i class="icon-s-twitter"></i></a></li>
+						
+						</ul><!-- /.social -->
 						
 						<!-- ============================================================= LOGO MOBILE ============================================================= -->
 						
@@ -62,10 +78,10 @@
 							<!-- ============================================================= LOGO : END ============================================================= -->
 							
 							
-							<!-- ============================================================= MAIN NAVIGATION ============================================================= -->			
-							<ul class="nav navbar-nav">										
+							<!-- ============================================================= MAIN NAVIGATION ============================================================= -->						
+								<ul class="nav navbar-nav">	
 								<!-- ============================================================= INICIO ============================================================= -->			
-								<li class="dropdown-menu">
+								<<li class="dropdown-menu">
 									<a href="#" class="dropdown-toggle js-activated">Inicio</a>
 									<ul class="dropdown-menu">
 										<li><a href="bares-cervezemos.html">Bares</a></li>
@@ -74,15 +90,15 @@
 								</li><!-- /.dropdown -->
 
 								<!-- ============================================================= MI CUENTA ============================================================= -->
-
+								
 								<li class="dropdown">
-									<a href="#" class="dropdown-toggle js-activated">Mi cuenta</a>
-									
-									<ul class="dropdown-menu">
-										<li><a href="#modal" data-toggle="modal">Informaci&oacuten</a></li>
-										<li><a href="index.html">Desconectar</a></li>
-									</ul><!-- /.dropdown-menu -->
-								</li><!-- /.dropdown -->
+				                  <a href="#" class="dropdown-toggle js-activated">Mi cuenta</a>
+				                  
+				                  <ul class="dropdown-menu">
+				                    <li><a href="informacionuser-cervezemos.html">Informaci&oacuten</a></li>
+				                    <li><a href="index.html">Desconectar</a></li>
+				                  </ul><!-- /.dropdown-menu -->
+				                </li><!-- /.dropdown -->
 								
 								<!-- ============================================================= AYUDA ============================================================= -->
 								
@@ -113,7 +129,7 @@
 											  
 									<div class="dropdown-menu">
 										<form id="search" class="navbar-form search" role="search">
-											<input type="search" class="form-control" placeholder="Type to search">
+											<input type="search" class="form-control" placeholder="Escribe para buscar">
 											<button type="submit" class="btn btn-default btn-submit icon-right-open"></button>
 										</form>
 									</div><!-- /.dropdown-menu -->
@@ -122,8 +138,6 @@
 							</ul><!-- /.nav -->
 
 							<!-- ============================================================= MAIN NAVIGATION : END ============================================================= -->
-							
-
 							
 						</div><!-- /.container -->
 					</div><!-- /.navbar-collapse -->
@@ -138,137 +152,105 @@
 		
 		<main>
 			
-			<div class="container inner">
-				<div class="row">
-
-					<!-- ============================================================= SECTION – VALUES ============================================================= -->
+			<!-- ============================================================= SECTION – ACCORDION ============================================================= -->
+			
+			<section id="accordion">
+				<div class="container inner">
 					
-					<section id="pattern-background-1" class="light-bg img-bg-softer" style="background-image: url(assets/images/art/pattern-background01.jpg);">
-						<div class="container inner-top inner-bottom-sm">
+					<div class="row">
+						<div class="col-md-8 col-sm-9 center-block text-center">
+							<header>
+								<h1>Nestea</h1>
+								<p>Mezcla entre refresco y te. ¿Que puede salir mal?</p>
+							</header>
+						</div><!-- /.col -->
+					</div><!-- ./row -->
+					
+					<!-- ./row -->
+					
+					<div class="row">
+						<div class="col-sm-6 inner-top">
 							
-							<div class="row">
-								<div class="col-md-8 col-sm-9 center-block text-center">
-									<header>
-										<h1>Nuestro proyecto</h1>
-										<p>Para la asignatura de Interfaces de Usuario hemos desarrollado esta aplicaci&oacuten destinada a la b&uacutesqueda de informaci&oacuten sobre bares.</p>
-									</header>
-								</div><!-- /.col -->
-							</div><!-- /.row -->
+							<h2>Información</h2>
+							<p class="single-line">A continuación os mostraremos nuestra información sobre este refresco.</p>
+							
+							<div id="accordion3" class="panel-group">
+								<div class="panel panel-default">			  
 									
-						</div><!-- /.container -->
-					</section>
+									<div class="panel-heading text-center">
+										<h4 class="panel-title">
+											<a class="panel-toggle collapsed" data-toggle="collapse" data-parent="#accordion5" href="#content4">
+												<span>Productos</span>
+											</a>
+										</h4>
+									</div><!-- /.panel-heading -->
+									
+									<div id="content4" class="panel-collapse collapse">
+										<div class="panel-body">
+											
+											<ul>
+												<li>Nestea al limon</li>
+												<li>Nestea al limon sin azucar</li>
+												<li>Nestea al limon, sin azucar y desteinado</li>
+												<li>Nestea con otras frutas</li>
+											</ul>
+										</div><!-- /.panel-body -->
+									</div><!-- /.content -->
+									
+								</div><!-- /.panel -->
+							</div><!-- /.accordion -->
+							
+							
+							<div id="accordion5" class="panel-group">
+								<div class="panel panel-default">			  
+									
+									<div class="panel-heading text-center">
+										<h4 class="panel-title">
+											<a class="panel-toggle collapsed" data-toggle="collapse" data-parent="#accordion5" href="#content6">
+												Bares que la poseen
+											</a>
+										</h4>
+									</div><!-- /.panel-heading -->
+									
+									<div id="content6" class="panel-collapse collapse">
+										<div class="panel-body">
+											<p>La poseen en su carta:</p>
+											<ul>
+												<li>Garabato</li>
+												<li>Discoteca aristok</li>
+												<li>Melmak</li>
+												<li>Qarnal</li>
+												<li>Los Tunantes</li>
+											</ul>
+										</div><!-- /.panel-body -->
+									</div><!-- /.content -->
+									
+								</div><!-- /.panel -->
+							</div><!-- /.accordion -->
+							
+							
+							
+						</div><!-- /.col -->
+						
+					</div><!-- ./row -->
 					
-					<!-- ============================================================= SECTION – VALUES : END ============================================================= -->
-					
-					<div class="col-md-4">
-						
-						<!-- ============================================================= SECTION – TEAM ============================================================= -->
-						
-						<section id="team" class="light-bg inner-xs inner-left-xs inner-right-xs">
-								
-							<h3 class="team-headline sidelines text-center"><span>Equipo t&eacutecnico</span></h3>
-							
-							<div class="row thumbs gap-md text-center">
-														
-								<div class="col-sm-6 thumb">
-									<figure class="member">
-										
-										<div class="member-image">
-											<img src="assets/images/equipo/adrian.jpg">
-										</div><!-- /.member-image -->
-										
-										<figcaption class="member-details bordered no-top-border">
-											<h3>
-												Adri&aacute Garc&iacutea 
-											</h3>
-										</figcaption>
-										
-									</figure>
-								</div><!-- /.col -->
-								
-							</div><!-- /.row -->
-							
-							<div class="row thumbs gap-md text-center">
-								
-								<div class="col-sm-6 thumb">
-									<figure class="member">
-										
-										<div class="member-image">
-											<img src="assets/images/equipo/miguel.jpg">
-										</div><!-- /.member-image -->
-										
-										<figcaption class="member-details bordered no-top-border">
-											<h3>
-												Miguel Chac&oacuten 
-											</h3>
-										</figcaption>
-										
-									</figure>
-								</div><!-- /.col -->
-							
-							<div class="row thumbs gap-md text-center">
-								
-								<div class="col-sm-6 thumb last-bottom">
-									<figure class="member">
-										
-										<div class="member-image">
-											<img src="assets/images/equipo/sofia.jpg">
-										</div><!-- /.member-image -->
-										
-										<figcaption class="member-details bordered no-top-border">
-											<h3>
-												Sof&iacutea L&oacutepez 
-											</h3>
-										</figcaption>
-										
-									</figure>
-								</div><!-- /.col -->
-						</section>
-						
-						<!-- ============================================================= SECTION – TEAM : END ============================================================= -->
-						
-					</div><!-- /.col -->
-						
-				</div><!-- /.row -->
-			</div><!-- /.container -->
+				</div><!-- /.container -->
+			</section>
+			
+			<!-- ============================================================= SECTION – ACCORDION : END ============================================================= -->
 
+		
+			
+			<!-- ============================================================= SECTION – BUY TEMPLATE : END ============================================================= -->
+			
 		</main>
 		
 		<!-- ============================================================= MAIN : END ============================================================= -->
 		
-		    <!-- ============================================================= MODAL MI CUENTA ============================================================= -->
-      
-      <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal-notification01" aria-hidden="true">
-        <div class="modal-dialog modal-xs">
-          <div class="modal-content">
-            
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-cancel-1"></i></span></button>
-            </div><!-- /.modal-header -->
-          
-          <!-- ============================================================= MODAL CONTENT ============================================================= -->
-                      
-            <div class="modal-body">
-              
-              <div class="container inner-xs text-center">
-                <h2>Mi cuenta</h2>
-                <p><i class="icon-user contact"></i>Nombre: Sof&iacutea L&oacutepez</p>
-                <p><i class="icon-mail-1 contact"></i>Email: slop@example.es</p>
-              </div><!-- /.container -->
-              
-            </div><!-- /.modal-body -->
-          
-          <!-- ============================================================= MODAL CONTENT : END ============================================================= -->
-          
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-    
-    <!-- ============================================================= MODAL MI CUENTA: END ============================================================= -->
-
+		
 		<!-- ============================================================= FOOTER ============================================================= -->
 		
-		
+				
 		<footer class="dark-bg">
 			<div class="container inner">
 				<div class="row">
@@ -309,6 +291,17 @@
 		<script src="assets/js/google.maps.api.v3.js"></script>
 		<script src="assets/js/viewport-units-buggyfill.js"></script>
 		<script src="assets/js/scripts.js"></script>
+		
+
+		<link href="assets/css/cerveza.css" rel="alternate stylesheet" title="Blue color">
+		
+		<script src="switchstylesheet/switchstylesheet.js"></script>
+		
+		<script>
+			$(document).ready(function(){ 
+				$(".changecolor").switchstylesheet( { seperator:"color"} );
+			});
+		</script>
 		<!-- For demo purposes – can be removed on production : End -->
 	</body>
 </html>
