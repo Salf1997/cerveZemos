@@ -47,14 +47,7 @@
 				
 				<div class="navbar-header">
 					<div class="container">
-						
-						
-						<ul class="social pull-right">
-							<li><a href="#"><i class="icon-s-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-s-gplus"></i></a></li>
-							<li><a href="#"><i class="icon-s-twitter"></i></a></li>
-						
-						</ul><!-- /.social -->
+
 						
 						<!-- ============================================================= LOGO MOBILE ============================================================= -->
 						
@@ -95,7 +88,7 @@
 				                  <a href="#" class="dropdown-toggle js-activated">Mi cuenta</a>
 				                  
 				                  <ul class="dropdown-menu">
-				                    <li><a href="informacionuser-cervezemos.html">Informaci&oacuten</a></li>
+				                    <li><a href="#modal" data-toggle="modal">Informaci&oacuten</a></li>
 				                    <li><a href="index.html">Desconectar</a></li>
 				                  </ul><!-- /.dropdown-menu -->
 				                </li><!-- /.dropdown -->
@@ -152,7 +145,6 @@
 		
 		<main>
 			
-			<!-- ============================================================= SECTION – ACCORDION ============================================================= -->
 			
 			<section id="accordion">
 				<div class="container inner">
@@ -236,17 +228,42 @@
 					
 				</div><!-- /.container -->
 			</section>
-			
-			<!-- ============================================================= SECTION – ACCORDION : END ============================================================= -->
 
-		
-			
-			<!-- ============================================================= SECTION – BUY TEMPLATE : END ============================================================= -->
 			
 		</main>
 		
 		<!-- ============================================================= MAIN : END ============================================================= -->
 		
+
+		    <!-- ============================================================= MODAL MI CUENTA ============================================================= -->
+      
+      <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal-notification01" aria-hidden="true">
+        <div class="modal-dialog modal-xs">
+          <div class="modal-content">
+            
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-cancel-1"></i></span></button>
+            </div><!-- /.modal-header -->
+          
+          <!-- ============================================================= MODAL CONTENT ============================================================= -->
+                      
+            <div class="modal-body">
+              
+              <div class="container inner-xs text-center">
+                <h2>Mi cuenta</h2>
+                <p><i class="icon-user contact"></i>Nombre: Sof&iacutea L&oacutepez</p>
+                <p><i class="icon-mail-1 contact"></i>Email: slop@example.es</p>
+              </div><!-- /.container -->
+              
+            </div><!-- /.modal-body -->
+          
+          <!-- ============================================================= MODAL CONTENT : END ============================================================= -->
+          
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    
+    <!-- ============================================================= MODAL MI CUENTA: END ============================================================= -->		
 		
 		<!-- ============================================================= FOOTER ============================================================= -->
 		
@@ -258,15 +275,7 @@
 						<h4>&iquestQui&eacutenes somos?</h4>
 						<p>CerveZemos es una aplicaci&oacuten destinada a informar a la gente sobre los bares de su zona y qu&eacute bebidas puede encontrarse en cada uno.</p>
 					</div><!-- /.col -->					
-					
-					<div class="col-md-3 col-sm-6 inner">
-						<h4>Informaci&oacuten de contacto</h4>
-						<ul class="contacts">
-							<li><i class="icon-location contact"></i> Calle Tajo, s/n, 28670 - Madrid, Espa&ntildea</li>
-							<li><i class="icon-mobile contact"></i> +34 917 40 72 72</li>
-							<li><a href="contact-cervezemos.html"><i class="icon-mail-1 contact"></i> Cont&aacutectanos</a></li>
-						</ul><!-- /.contacts -->
-					</div><!-- /.col -->
+
 				</div><!-- /.row --> 
 			</div><!-- .container -->
 		</footer>
@@ -291,17 +300,6 @@
 		<script src="assets/js/google.maps.api.v3.js"></script>
 		<script src="assets/js/viewport-units-buggyfill.js"></script>
 		<script src="assets/js/scripts.js"></script>
-		
 
-		<link href="assets/css/cerveza.css" rel="alternate stylesheet" title="Blue color">
-		
-		<script src="switchstylesheet/switchstylesheet.js"></script>
-		
-		<script>
-			$(document).ready(function(){ 
-				$(".changecolor").switchstylesheet( { seperator:"color"} );
-			});
-		</script>
-		<!-- For demo purposes – can be removed on production : End -->
 	</body>
 </html>
