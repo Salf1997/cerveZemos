@@ -4,14 +4,6 @@ var users = [{
   id: 1,
   username: 'usuario1',
   password: 'usuario1',
-}, {
-  id: 2,
-  username: 'sofia',
-  password: 'alejandra',
-}, {
-  id: 3,
-  username: 'miguel',
-  password: 'chacon',
 }];
 
 function getUserByProperty(key, value, strict, multiple, case_insensitive) {
