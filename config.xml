@@ -32,6 +32,8 @@
 	    <variable name="LOCATION_WHEN_IN_USE_DESCRIPTION" value="(your custom message)" />
 	    <variable name="LOCATION_ALWAYS_USAGE_DESCRIPTION" value="(your custom message)" />
   	</plugin>
+  	<gap:plugin name="com.indigoway.cordova.whitelist.whitelistplugin" version="1.1.1" />
+
 
 
 	  <icon src="www/assets/images/ztransparente.png"/>
