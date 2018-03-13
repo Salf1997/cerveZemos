@@ -2,16 +2,16 @@ var loggedusers = [];
 
 var users = [{
   id: 1,
-  username: 'user1',
-  password: 'a',
+  username: 'usuario1',
+  password: 'usuario1',
 }, {
   id: 2,
-  username: 'admin1',
-  password: 'b',
+  username: 'sofia',
+  password: 'alejandra',
 }, {
   id: 3,
-  username: 'supplier1',
-  password: 'c',
+  username: 'miguel',
+  password: 'chacon',
 }];
 
 function getUserByProperty(key, value, strict, multiple, case_insensitive) {
@@ -196,6 +196,7 @@ document.getElementById('login-form').addEventListener('submit', function(e) {
   var username_element = e.srcElement.elements.username;
   var password_element = e.srcElement.elements.password;
 
+
   // check whether these elements return right stuff
   if (username_element && password_element) {
     // get the values of username and password
@@ -204,6 +205,7 @@ document.getElementById('login-form').addEventListener('submit', function(e) {
 
     // execute the 'login' function with the username and password filled in on the client
     var user = login(username, password);
+    
 
     // check whether the login was successful
     if (user !== false) {
