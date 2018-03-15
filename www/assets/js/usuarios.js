@@ -206,9 +206,6 @@ document.getElementById('login-form').addEventListener('submit', function(e) {
 
       // reset the password input field
       password_element.value = '';
-
-      // alert the client that login was successful
-      alert('Logged in as ' + user.username + '.');
     } else {
       // reset the password input field
       password_element.value = '';

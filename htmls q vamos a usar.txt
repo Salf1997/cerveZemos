@@ -1,9 +1,0 @@
-index.html - pagina principal
-portfolio2.html - lista de locales
-	portfolio-post.html - ficha de bar
-blog4.html - reviews de bares
-acordion.html - ficha de cervezas/bebida
-about2.html - sobre nosotros
-
-
-hola miguel
